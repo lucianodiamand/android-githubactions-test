@@ -1,0 +1,6 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="endstart_margin_button_recace">20dp</dimen>
+    <dimen name="endstart_margin_button_ingnot">20dp</dimen>
+
+</resources>
