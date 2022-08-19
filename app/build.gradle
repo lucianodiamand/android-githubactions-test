@@ -16,11 +16,9 @@ android {
         def apiUrl = properties.getProperty('API_URL')
 
         debug {
-            buildConfigField 'String', "apiUrl", apiUrl
             resValue('string', "apiUrl", apiUrl)
         }
         release {
-            buildConfigField 'String', "apiUrl", apiUrl
             resValue('string', "apiUrl", apiUrl)
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
