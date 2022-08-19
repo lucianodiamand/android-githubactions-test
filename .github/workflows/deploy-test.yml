@@ -35,6 +35,12 @@ jobs:
               uses: actions/setup-java@v1
               with:
                   java-version: 1.8
+            - name: Make gradlew executable
+              run: chmod +x ./gradlew
+            - name: Update Username from Secrets
+              env:
+                API_URL: ${{ secrets.BASE_URL_DEV }}
+              run: echo API_URL="$API_URL" > ./local.properties
             - name: Build APK
               run: ./gradlew assembleDebug --stacktrace
             - name: Upload APK
