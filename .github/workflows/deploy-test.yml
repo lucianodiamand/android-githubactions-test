@@ -18,7 +18,12 @@ jobs:
               with:
                 distribution: 'zulu'
                 java-version: 8
-
+            - name: Make gradlew executable
+              run: chmod +x ./gradlew
+            - name: Update Username from Secrets
+              env:
+                API_URL: ${{ secrets.BASE_URL_DEV }}
+              run: echo API_URL="$API_URL" > ./local.properties
             - name: Setup Android SDK
               uses: android-actions/setup-android@v2
 
