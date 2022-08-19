@@ -7,6 +7,7 @@ import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,10 +22,14 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    // TODO Tomar el valor del secret
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String apiUrl = this.getResources().getString(R.string.apiUrl);
+        Log.i("APP", apiUrl);
     }
 
 }
